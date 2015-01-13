@@ -19,11 +19,18 @@
 **bold**
 
 ##Lists
+	*first level
+	*first level
+		*second level
 ###Unordered lists
 * first level
 * first level
 	* second level
 
 ###Ordered lists
+	1. first level
+	2. first level
+		1. second level
 1. first level
-2. second level
+2. first level
+	1. second level
