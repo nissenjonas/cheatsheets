@@ -52,10 +52,14 @@
 	`<code>`
  `<code>` 
 
-### Blocks
-> Start each line in block with 4 spaces or tab!
+###Blocks
+> Start each line in block with 4 spaces or tab
 
     public void HelloWorld()
 	{
 		Console.WriteLine("Hello world!")
 	}
+
+##Raw html
+	<span style="color: red">Red text</span>
+<span style="color: red">Red text</span>
