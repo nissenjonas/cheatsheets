@@ -14,7 +14,9 @@ To get help for shell commands use the manual command
 	wget http://www.url.com/path/to/filename.fileextension
 
 ## Tools
-### Nano - super simple text editor
+### Nano
+Super simple text editor
+
 	# Install
 	sudo apt-get install nano
 
