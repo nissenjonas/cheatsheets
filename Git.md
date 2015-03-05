@@ -1,6 +1,11 @@
 #Git Cheatsheet
 List of Git commands, configuration and tools 
 
+## Flow
+	git add .						# Stages files for commit (. indicates current folder)
+	git commit -m "commit message"	
+	git commit --amend
+
 ## Commands
 	# File compare
 	git difftool [filename]				# Start difftool and shows pending changes for modified file
