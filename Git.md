@@ -2,9 +2,9 @@
 List of Git commands, configuration and tools 
 
 ## Flow
-	git add .						# Stages files for commit (. indicates current folder)
+	git add .									# Stages files for commit (. indicates current folder)
 	git commit -m "commit message"	
-	git commit --amend
+	git commit --amend -m "new commit message"	# Change the last commit message
 
 ## Commands
 	# File compare
