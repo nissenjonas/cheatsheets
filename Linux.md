@@ -1,5 +1,10 @@
 # Linux Cheatsheet
 
+## Scripts
+	chmod u+x ./<script_name>		# Grants the script owner execution rights for a script
+	chomd a+x ./<script_name>		# Grants all users execution rights
+	./<script_name>					# Executes the script
+
 ## Help
 To get help for shell commands use the manual command
 
