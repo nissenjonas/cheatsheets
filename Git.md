@@ -19,8 +19,11 @@ List of Git commands, configuration and tools
 
 ### Commands (for scripting setup)
 	
-	git config user.name "user name" 		# Set user name for curent repository	
-	git config --global "user name" 		# Set user name globally
+	git config --global credential.helper cache						# Caches your credentials for 15 minutes
+	git config --global credential.helper "cache --timeout=XXXX"	# Extend the credential cache timeout
+
+	git config user.name "user name" 				# Set user name for curent repository	
+	git config --global "user name" 				# Set user name globally
 	
 	git config --global diff.tool diffmerge
 	git config --global difftool.diffmerge.cmd 'C:/.../sgdm.exe' $LOCAL $REMOTE
