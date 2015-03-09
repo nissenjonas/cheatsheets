@@ -3,6 +3,10 @@ List of Git commands, configuration and tools
 
 ## Flow
 	git add .									# Stages files for commit (. indicates current folder)
+	git add -u .								# Stage deletion of files
+	git reset <file>							# Unstage file (short for git reset HEAD)
+	git checkout -- <file>						# Undo specifc file
+	git checkout -- .							# Undo all changes
 	git commit -m "commit message"	
 	git commit --amend -m "new commit message"	# Change the last commit message
 
