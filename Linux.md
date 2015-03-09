@@ -2,7 +2,7 @@
 
 ## Scripts
 	chmod u+x ./<script_name>		# Grants the script owner execution rights for a script
-	chomd a+x ./<script_name>		# Grants all users execution rights
+	chmod a+x ./<script_name>		# Grants all users execution rights
 	./<script_name>					# Executes the script
 
 ## Help
