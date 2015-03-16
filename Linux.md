@@ -12,6 +12,8 @@ To get help for shell commands use the manual command
 	man wget
 
 ## Shell commands
+### Basic commands
+	rm -f -r <file_name> 			# Delete file or folder. -f is Force and -r is recursive
 ### wget	
 	# Ftp
 	wget ftp://username:password@SERVERNAME/directory/file
