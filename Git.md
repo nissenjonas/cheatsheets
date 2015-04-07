@@ -38,6 +38,14 @@ List of Git commands, configuration and tools
 		cmd = 'C:/.../sgdm.exe' $LOCAL $REMOTE
 	...
 
+### Ignore files
+Exclude files from your repo
+
+	<filename>			# Specific file 
+	<foldername>		# Specific folder
+	*.dll				# Pattern excluding all dll files
+
+
 ## Tools
 ### PoshGit
 	# Starts ssh-agent. 
