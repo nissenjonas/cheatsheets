@@ -10,6 +10,10 @@ List of Git commands, configuration and tools
 	git commit -m "commit message"	
 	git commit --amend -m "new commit message"	# Change the last commit message
 
+	# Remotes
+	git remote add origin ssh://login@[ip]/[path]
+	git remote add origin http://[ip]/[path]
+
 ## Commands
 	# File compare
 	git difftool [filename]				# Start difftool and shows pending changes for modified file

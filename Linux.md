@@ -1,4 +1,5 @@
 # Ubuntu Cheatsheet
+I have been using Ubuntu 14.x while playing around with Linux.
 
 ## Scripts
 	chmod u+x ./<script_name>		# Grants the script owner execution rights for a script
@@ -13,6 +14,8 @@ To get help for shell commands use the manual command
 ## Shell commands
 ### Basic commands
 	rm -f -r <file_name> 			# Delete file or folder. -f is Force and -r is recursive
+	visudo							# Opens up super user file in standard editor
+	
 ### apt-get
 	apt-get install (-s) <package_name> 		# -s runs a simulation 
 	apt-get remove (--purge) <package_name> 	# --purge option will remove all configuration and data
