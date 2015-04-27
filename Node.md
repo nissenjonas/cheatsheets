@@ -6,3 +6,8 @@
 
 ## Tools
 ### PM2
+Process manager for Node.js apps
+github.com/Unitech/pm2
+
+	npm install pm2 -g
+	pm start index.js -i max	# -i max sets PM2 to use all cores on the box	
