@@ -25,6 +25,7 @@ List of Git commands, configuration and tools
 	
 	git config --global credential.helper cache						# Caches your credentials for 15 minutes
 	git config --global credential.helper "cache --timeout=XXXX"	# Extend the credential cache timeout
+	git config credential.helper wincred							# working with TFS Git
 
 	git config user.name "user name" 								# Set user name for curent repository	
 	git config --global "user name" 								# Set user name globally
