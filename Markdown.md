@@ -5,11 +5,14 @@
 	## H2
 	### H3
 
-#H1
-##H2
-###H3
+## TOC
 
-##Formatting
+## Table of Contents
+
+  1. [Header1](#H1)
+  ...
+
+## Formatting
 
 	*italic*
 	**bold**
