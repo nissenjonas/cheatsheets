@@ -11,6 +11,12 @@ Basic Tips and tricks for Powershell
 	> [System.Math]::Sqrt(9)
 	3
 
+## Scripts
+
+### Script parameters
+
+### Default parameters
+
 ## Conditional logic
 	-eq			# Equal to
 	-lt			# Less than
@@ -26,6 +32,10 @@ Basic Tips and tricks for Powershell
 ## Filters
 	#  
 	> 1..10 | ? { $_ % 2 } | Write-Host
+
+## Loop 
+	# $_ is used to reference the current variable in the pipeline
+	> 1..10 | % { Write-Host $_ }
 
 ## Error handling
 	try
