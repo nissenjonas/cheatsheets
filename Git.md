@@ -2,7 +2,15 @@
 List of Git commands, configuration and tools 
 
 ## Flow
+	git checkout -b [featurebranch]	
 	git add --all								# Stages all files for commit
+	git fetch origin							# download remote commits 
+	git rebase master			
+	git rebase -i HEAD~[x]						# x number of commits to rebase interactivly
+	git checkout master
+	git merge [featurebranch]
+
+## Rollback
 	git reset <file>							# Unstage file (short for git reset HEAD)
 	git reset HEAD								# Unstage all stages files
 	git reset --hard							# Undo all uncommited changes 
@@ -11,9 +19,13 @@ List of Git commands, configuration and tools
 	git commit --amend -m "new commit message"	# Change the last commit message
 	git reset --soft HEAD^						# Undo commit 
 
-	# Remotes
+# Remotes
 	git remote add origin ssh://login@[ip]/[path]
 	git remote add origin http://[ip]/[path]
+
+## Aliases
+	unstage: git reset head
+	undo-commmit: reset --soft HEAD^
 
 ## Commands
 	# File compare
@@ -33,6 +45,7 @@ List of Git commands, configuration and tools
 	
 	git config --global diff.tool diffmerge
 	git config --global difftool.diffmerge.cmd 'C:/.../sgdm.exe' $LOCAL $REMOTE
+	git config --global core.editor "C:\Program Files (x86)\Microsoft VS Code\code.exe" # setup default editor for git.
 
 ### Configuration file
 	[user]
@@ -42,6 +55,8 @@ List of Git commands, configuration and tools
 		tool = diffmerge
 	[difftool "diffmerge"]
 		cmd = 'C:/.../sgdm.exe' $LOCAL $REMOTE
+	[core]
+		editor = C:\\Program Files (x86)\\Microsoft VS Code\\code.exe
 	...
 
 ### Ignore files
@@ -53,7 +68,5 @@ Exclude files from your repo
 
 
 ## Tools
-### PoshGit
-	# Starts ssh-agent. 
-	# Keeps passphrase for a session in order only to enter it once
-	Start-SshAgent
+* PoshGit
+* SourceTree
