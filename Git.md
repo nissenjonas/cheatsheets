@@ -19,6 +19,13 @@ List of Git commands, configuration and tools
 	git commit --amend -m "new commit message"	# Change the last commit message
 	git reset --soft HEAD^						# Undo commit 
 
+# Branches
+    git branch -d [branch_name]                 # deletes a local branch
+    git push origin [branch_name]               # delete the remote branch after deleting it locally
+    git branch                                  # lists all local branches
+    git branch -v                               # -v shows last commit on all local branches
+    git branch --merged / --unmerged            # filter to see branches that have or have not been merged into current branch 
+
 # Remotes
 	git remote add origin ssh://login@[ip]/[path]
 	git remote add origin http://[ip]/[path]
