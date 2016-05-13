@@ -9,8 +9,11 @@
 
 ## Table of Contents
 
-  1. [Header1](#H1)
-  ...
+	1. [Header1](#H1)
+	2. [Header2](#H2)
+	
+1. [Header1](#H1)
+2. [Header2](#H2)
 
 ## Formatting
 
