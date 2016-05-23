@@ -3,20 +3,25 @@ List of Git commands, configuration and tools
 
 ## Flow
 	git checkout -b [featurebranch]	
-	git add --all								# Stages all files for commit
+	git add --all								# Stages all files for commit	
+	git commit -m "commit message"	
 	git fetch origin							# download remote commits 
 	git rebase master			
 	git rebase -i HEAD~[x]						# x number of commits to rebase interactivly
 	git checkout master
 	git merge [featurebranch]
+	
+	--------------------------------------------
+	
+	git stash									# saves all modified files from the working directory to be retrieved later
+	git stash apply 							# retrives the latest stash and applies it
+	git commit --amend -m "new commit message"	# Change the last commit message	
 
 ## Rollback
 	git reset <file>							# Unstage file (short for git reset HEAD)
 	git reset HEAD								# Unstage all stages files
 	git reset --hard							# Undo all uncommited changes 
-	git checkout -- <file>						# Undo specifc file	
-	git commit -m "commit message"	
-	git commit --amend -m "new commit message"	# Change the last commit message
+	git checkout -- <file>						# Undo specifc file
 	git reset --soft HEAD^						# Undo commit 
 
 # Branches
