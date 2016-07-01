@@ -35,6 +35,11 @@ List of Git commands, configuration and tools
 	git remote add origin ssh://login@[ip]/[path]
 	git remote add origin http://[ip]/[path]
 
+# Tagging 
+	git tag										# lists all tags
+	git tag -a [tagname] -m [comment] 			# creates annotated tag
+	git push origin [tagname]					# push to remote
+
 ## Aliases
 	unstage: git reset head
 	undo-commmit: reset --soft HEAD^
