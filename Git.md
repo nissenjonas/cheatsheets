@@ -1,4 +1,4 @@
-#Git Cheatsheet
+# Git Cheatsheet
 List of Git commands, configuration and tools 
 
 ## Flow
@@ -12,10 +12,14 @@ List of Git commands, configuration and tools
 	git merge [featurebranch]
 	
 	--------------------------------------------
+
+	git commit --amend -m "new commit message"	# Change the last commit message
+
+	--------------------------------------------
 	
 	git stash									# saves all modified files from the working directory to be retrieved later
-	git stash apply 							# retrives the latest stash and applies it
-	git commit --amend -m "new commit message"	# Change the last commit message	
+	git stash pop 							# retrives the latest stash and applies it
+		
 
 ## Rollback
 	git reset <file>							# Unstage file (short for git reset HEAD)
@@ -25,15 +29,23 @@ List of Git commands, configuration and tools
 	git reset --soft HEAD^						# Undo commit 
 
 # Branches
-    git branch -d [branch_name]                 # deletes a local branch
-    git push origin [branch_name]               # delete the remote branch after deleting it locally
+## List
     git branch                                  # lists all local branches
     git branch -v                               # -v shows last commit on all local branches
-    git branch --merged / --unmerged            # filter to see branches that have or have not been merged into current branch 
+    git branch --merged / --no-merged           # filter to see branches that have or have not been merged into current branch	
+## Delete
+    git branch -d [branch_name]                 # deletes a local branch
+    git push origin [branch_name]               # delete the remote branch after deleting it locally 
+
+# log
+   git log
+   git log branch1..branch2 					# two-dot range. Logs all commits from branch2, but exclude the ones from branch1. E.g. origin..HEAD or develop..feature-branch
 
 # Remotes
 	git remote add origin ssh://login@[ip]/[path]
 	git remote add origin http://[ip]/[path]
+
+	git remote add upstream https://url.git 	# useful for merging upstream remotes when forking on github.
 
 # Tagging 
 	git tag										# lists all tags
