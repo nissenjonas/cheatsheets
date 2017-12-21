@@ -22,6 +22,7 @@ Basic Tips and tricks for Powershell
 	-lt			# Less than
 	-gt			# Greater than
 	-ne			# Not equal to
+	-like			# @("John Doe", "Jane Doe") | ? {$_ -like "*Doe"} => "John Doe", "Jane Doe"
 
 	-and		
 	-or
