@@ -29,6 +29,7 @@ List of Git commands, configuration and tools
 	git reset --soft HEAD^						# Undo commit 
 
 # Branches
+    git checkout -				# Checks out last used branch
 ## List
     git branch                                  # lists all local branches
     git branch -v                               # -v shows last commit on all local branches
