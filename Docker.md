@@ -1,6 +1,6 @@
 # Docker cheatsheet
 
-## Basic flow	
+### Basic flow	
 
 	docker build / pull 
 	docker run [image name]	
@@ -10,7 +10,7 @@
 	docker stop [container name]
 	docker start [container name]
 
-## Commands
+### Commands
 * `build` - build and image
 * `attach` - attach to a container
 * `commit` - save changes to a container (creates a new image)
@@ -28,7 +28,7 @@
 * `rmi` - remove an image from the host
 	
 
-### Run
+#### Run
 	# Start a container from an image
 	$ docker run [options] [image name]:[image tag] [command]
 
@@ -36,7 +36,7 @@
 	$ docker run ubuntu:14.04 echo 'hello world'
 	$ hello world
 
-#### Run Options
+##### Run Options
 
 * *-t* enables a terminal from inside the container
 * *-i* connects to STDIN of the container
@@ -45,7 +45,7 @@
 * *-P* maps container port 5000 to a high port number on the host
  
 
-#### Examples
+##### Examples
 	# Starts a container and connects to the terminal
 	$ docker run -t -i ubuntu:14:04 bash 
 	root@[containerId]:/#
@@ -54,33 +54,33 @@
 	$ docker run -d ubuntu:14.04 bash -c "while true; do echo 'hello world'; sleep 1; done" 
 	
 
-### Commit
+#### Commit
 Saves changes made in a container to a new image.
 
-#### Commit options
+##### Commit options
 * *-m* - commit message/comment
 * *-a* - specifies an author of the commit
 
-#### Examples
+##### Examples
 	docker commit -m [comment] -a [author] [containerId] [imageName]
 	docker commit -m "Installed Nginx" -a "nissen" 0b2616b0e5a8 nissen/helloWorldApp
 
-### Logs
+#### Logs
 Connects to a container and outputs the STDOUT.
 
-### Logs options
+#### Logs options
 * *-f* - keeps the connection to STDOUT open and keeps displaying output 
 
-### Example
+#### Example
 	docker logs [container name]
 
-### Build
+#### Build
 Builds an image.
 
-#### Options
+##### Options
 * *-t* - 
 
-### Examples
+#### Examples
 	
 	docker build -t nissen/myapp:v1 . 
 
@@ -98,3 +98,7 @@ The docker file describes how to build an image.
 	MAINTAINER John Doe <jdoe@example.com>
 	RUN apt-get install nginx 	# Install Nginx
 	 
+
+## Docker Compose
+
+docker-compose build [servicename]
