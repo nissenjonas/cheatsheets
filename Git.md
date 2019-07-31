@@ -40,6 +40,7 @@ List of Git commands, configuration and tools
 
 # log
 	git log
+	git log --oneline 			# simple one line view og commit logs
 	git log branch1..branch2 		# two-dot range. Logs all commits from branch2, but exclude the ones from branch1. E.g. origin..HEAD or develop..feature-branch
 
 # Remotes
