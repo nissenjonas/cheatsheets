@@ -39,8 +39,8 @@ List of Git commands, configuration and tools
     git push origin [branch_name]               # delete the remote branch after deleting it locally 
 
 # log
-   git log
-   git log branch1..branch2 					# two-dot range. Logs all commits from branch2, but exclude the ones from branch1. E.g. origin..HEAD or develop..feature-branch
+	git log
+	git log branch1..branch2 		# two-dot range. Logs all commits from branch2, but exclude the ones from branch1. E.g. origin..HEAD or develop..feature-branch
 
 # Remotes
 	git remote add origin ssh://login@[ip]/[path]
