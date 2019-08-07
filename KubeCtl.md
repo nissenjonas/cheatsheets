@@ -1,8 +1,12 @@
 # kubeCtl Cheatsheet
 
 ## Basic commands
-
-kubectl -n [namespace] [command]
+        
+    kubectl config current-context                      # Shows the current context for kubectl
+    kubectl config use-context docker-for-desktop       # Sets kubectl to work on the local cluster
+    
+    kubectl -n [namespace] [command]
+    
 
 * delete deployment
 * get pods --watch
