@@ -1,6 +1,6 @@
 # Azure Cli Cheatsheet
 
-# Managing Subscriptions
+## Managing Subscriptions
 
   az account list -o table          # List existing accounts available from the machine
   az login                          # Login to a subscription
