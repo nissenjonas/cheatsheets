@@ -17,6 +17,17 @@ Basic Tips and tricks for Powershell
 
 ### Default parameters
 
+### Script Requirements
+You can write preprocessor requirements in the top of your scripts to ensure admin rights, specific modules to be installed, etc.
+
+	#Requires -Version <N>[.<n>]
+	#Requires -PSSnapin <PSSnapin-Name> [-Version <N>[.<n>]]
+	#Requires -Modules { <Module-Name> | <Hashtable> }
+	#Requires -ShellId <ShellId> -PSSnapin <PSSnapin-Name> [-Version <N>[.<n>]]
+	#Requires -RunAsAdministrator
+
+See [Ms docs](https://docs.microsoft.com/da-dk/powershell/module/microsoft.powershell.core/about/about_requires) for details.
+
 ## Conditional logic
 	-eq			# Equal to
 	-lt			# Less than
