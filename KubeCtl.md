@@ -12,6 +12,10 @@
 * get pods --watch
 * logs [podname]
 
+## Deployment
+    # Restart an existing service deployment
+     kubectl -n [namespace] rollout restart deploy/[deployment name]
+
 ## Azure Kubernetes Service (AKS)
 
 Install [Azure Cli](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest)
