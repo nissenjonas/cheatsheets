@@ -30,6 +30,9 @@ List of Git commands, configuration and tools
 
 # Branches
     git checkout -				# Checks out last used branch
+    git remote prune origin --dry-run		# Shows which remote tracking branches will be removed
+    git fetch -p / --prune			# removes any local branches where the remote branch is gone
+    
 ## List
     git branch                                  # lists all local branches
     git branch -v                               # -v shows last commit on all local branches
