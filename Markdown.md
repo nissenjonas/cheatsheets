@@ -1,9 +1,8 @@
 # Markdown cheatsheet
 ## Headers
-
     # H1
-	## H2
-	### H3
+    ## H2
+    ### H3
 
 ## TOC
 
@@ -65,6 +64,18 @@
 	{
 		Console.WriteLine("Hello world!")
 	}
+
+For Github flavored Markdown you get syntax highlighting by using 3 backticks (`) and specifying the language
+
+	```c# 
+	 var x = 4;
+	```
+
+```c# 
+ var x = 4;
+```
+
+See all [languages supported](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)
 
 ## Raw html
 	<span style="color: red">Red text</span>
