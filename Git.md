@@ -80,6 +80,9 @@ List of Git commands, configuration and tools
 	git config --global diff.tool diffmerge
 	git config --global difftool.diffmerge.cmd 'C:/.../sgdm.exe' $LOCAL $REMOTE
 	git config --global core.editor "C:\Program Files (x86)\Microsoft VS Code\code.exe" # setup default editor for git.
+	
+	# Default default push to origin with the local branch name
+	git config --global push.default current 
 
 ### Configuration file
 	[user]
