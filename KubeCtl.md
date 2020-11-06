@@ -1,5 +1,9 @@
 # kubeCtl Cheatsheet
 
+## Highlights
+
+    kubectl -n [namespace] port-forward [pod name] [local port]:[container port]
+
 ## Basic commands
         
     kubectl config current-context                      # Shows the current context for kubectl
