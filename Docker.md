@@ -43,6 +43,7 @@
 * *-d* runs the container as a daemon.
 * *-p* maps specific ports between the container and the host
 * *-P* maps container port 5000 to a high port number on the host
+* --restart [always|no|on-failure] specifies whether the container starts automatically on failure or restart of the daemon
  
 
 ##### Examples
