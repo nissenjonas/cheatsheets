@@ -32,13 +32,13 @@ df.show(10) // displays content of first 10 rows
 ```scala
 val titles = spark.read
         .format("csv") 
-        .option("delimiter", ";|\t")
+        .option("delimiter", "\t")
         .option("header", true) 
         .load("c:/data/imdb/titles.basics.tsv")
 
 val ratings = spark.read
         .format("csv") 
-        .option("delimiter", ";|\t")
+        .option("delimiter", "\t")
         .option("header", true) 
         .load("c:/data/imdb/titles.ratings.tsv")
 
