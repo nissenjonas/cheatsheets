@@ -25,9 +25,11 @@ df.limit(50) // optionally limit the number of rows to write
 df.show(10) // displays content of first 10 rows
 ```
 
-## Spark Optimizations explained
+## Spark Optimizations
+
 Logical Plan -> Analyzed Logical Plan -> Optimized Logical Plan-> Physical Plan
 
+### Logical optimizations
 
 ```scala
 // (dumb) example where the same filter is applied twice
@@ -37,7 +39,7 @@ val unoptimizedDf = df
 
 df.explain(true) // prints the execution plan for the dataframe
 //
-// Observe how the optimized plan adds a null check and removes the dubplicate filter
+// Observe how the optimized plan adds a null check and removes the dublicate filter
 //
 //  == Parsed Logical Plan ==
 //  'Filter ('titleType = short)
@@ -47,6 +49,20 @@ df.explain(true) // prints the execution plan for the dataframe
 //  == Optimized Logical Plan ==
 //  Filter (isnotnull(titleType#17) AND (titleType#17 = short))
 //  ...
+```
+
+### Predicate pushdown
+Where filters are pushed to the datasource.
+
+
+
+```scala
+// using a sql server as datasource, 
+// Spark will push any possible predicates to the request to the database
+val dataframe = spark
+.read
+.jdbc(url=..., table="tableName", ...)
+.filter(col("columnName") ==  "value") // filter predicate will be included in the database query.
 ```
 
 ## Imdb example
