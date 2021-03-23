@@ -25,9 +25,37 @@ df.limit(50) // optionally limit the number of rows to write
 df.show(10) // displays content of first 10 rows
 ```
 
+## Spark Optimizations explained
+Logical Plan -> Analyzed Logical Plan -> Optimized Logical Plan-> Physical Plan
+
+
+```scala
+// (dumb) example where the same filter is applied twice
+val unoptimizedDf = df
+        .filter(col("columnName") === "value")
+        .filter(col("columnName") === "value")
+
+df.explain(true) // prints the execution plan for the dataframe
+//
+// Observe how the optimized plan adds a null check and removes the dubplicate filter
+//
+//  == Parsed Logical Plan ==
+//  'Filter ('titleType = short)
+//  +- Filter (titleType#17 = short)
+//  ...
+//  
+//  == Optimized Logical Plan ==
+//  Filter (isnotnull(titleType#17) AND (titleType#17 = short))
+//  ...
+```
+
 ## Imdb example
 
 > Download data from [imdb](https://www.imdb.com/interfaces/)
+
+### TODO
+* Create dataframe with only relevant ratings before joining
+* Only join needed columns
 
 ```scala
 val titles = spark.read
