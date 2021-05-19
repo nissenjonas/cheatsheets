@@ -19,7 +19,10 @@ List of Git commands, configuration and tools
 	
 	git stash									# saves all modified files from the working directory to be retrieved later
 	git stash pop 							# retrives the latest stash and applies it
-		
+
+## Git + Powershell
+	# Delete branches based on wildcard - list and pipe to delete command
+	git branch --list AN-1996* | % { git branch -D $_.trim() }
 
 ## Rollback
 	git reset <file>							# Unstage file (short for git reset HEAD)
