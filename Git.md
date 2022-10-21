@@ -32,9 +32,17 @@ List of Git commands, configuration and tools
 	git reset --soft HEAD^						# Undo commit 
 
 # Branches
-    git checkout -				# Checks out last used branch
-    git remote prune origin --dry-run		# Shows which remote tracking branches will be removed
-    git fetch -p / --prune			# removes any local branches where the remote branch is gone
+    # Checks out last used branch
+    git checkout -				
+    
+    # Shows which remote tracking branches will be removed
+    git remote prune origin --dry-run		
+    
+    # removes any local branches where the remote branch is gone
+    git fetch -p / --prune	
+    
+    # show 10 most recently updated branches (formated with short refname)
+    git for-each-ref --count=10 --sort=-committerdate refs/heads/ --format='%(refname:short)'
     
 ## List
     git branch                                  # lists all local branches
