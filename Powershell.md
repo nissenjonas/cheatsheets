@@ -1,49 +1,60 @@
-# Powershell
-Basic Tips and tricks for Powershell
+# PowerShell Cheatsheet
+
+## Table of Contents
+- [Commands](#commands)
+- [Objects and Types](#objects-and-types)
+- [Scripts](#scripts)
+    - [Script Parameters](#script-parameters)
+    - [Default Parameters](#default-parameters)
+    - [Script Requirements](#script-requirements)
+- [Conditional Logic](#conditional-logic)
+- [Filters](#filters)
+- [Loop](#loop)
+- [Error Handling](#error-handling)
+- [Tricks](#tricks)
 
 ## Commands
-	Test-Path "c:\temp\file.txt" 		# Returns True if file exists, and False if not
+- `Test-Path "c:\temp\file.txt"`: Returns True if file exists, and False if not
 
 ## Objects and Types
-	# Calling static methods and properties
-	> [System.Environment]::CurrentDirectory
-	c:\temp
-	> [System.Math]::Sqrt(9)
-	3
+### Calling Static Methods and Properties
+- `[System.Environment]::CurrentDirectory`: returns current directory
+- `[System.Math]::Sqrt(9)`: returns square root of 9
 
 ## Scripts
+### Script Parameters
+- TODO
 
-### Script parameters
-
-### Default parameters
+### Default Parameters
+- TODO
 
 ### Script Requirements
 You can write preprocessor requirements in the top of your scripts to ensure admin rights, specific modules to be installed, etc.
 
-	#Requires -Version <N>[.<n>]
-	#Requires -PSSnapin <PSSnapin-Name> [-Version <N>[.<n>]]
-	#Requires -Modules { <Module-Name> | <Hashtable> }
-	#Requires -ShellId <ShellId> -PSSnapin <PSSnapin-Name> [-Version <N>[.<n>]]
-	#Requires -RunAsAdministrator
+- `#Requires -Version <N>[.<n>]`
+- `#Requires -PSSnapin <PSSnapin-Name> [-Version <N>[.<n>]]`
+- `#Requires -Modules { <Module-Name> | <Hashtable> }`
+- `#Requires -ShellId <ShellId> -PSSnapin <PSSnapin-Name> [-Version <N>[.<n>]]`
+- `#Requires -RunAsAdministrator`
 
 See [Ms docs](https://docs.microsoft.com/da-dk/powershell/module/microsoft.powershell.core/about/about_requires) for details.
 
-## Conditional logic
-	-eq			# Equal to
-	-lt			# Less than
-	-gt			# Greater than
-	-ne			# Not equal to
-	-like			# @("John Doe", "Jane Doe") | ? {$_ -like "*Doe"} => "John Doe", "Jane Doe"
+## Conditional Logic
+- `-eq`: Equal to
+- `-lt`: Less than
+- `-gt`: Greater than
+- `-ne`: Not equal to
+- `-like`: Example: `@("John Doe", "Jane Doe") | ? {$_ -like "*Doe"}` => "John Doe", "Jane Doe"
+- `-and`
+- `-or`
 
-	-and		
-	-or
 
-	# Example
-	> if(7 -gt 10 -and 10 -ne 11) { Write-Host True } else { Write-Host False } 
-	> False
+# Example
+> if(7 -gt 10 -and 10 -ne 11) { Write-Host True } else { Write-Host False } 
+> False
 ## Filters
-	#  
-	> 1..10 | ? { $_ % 2 } | Write-Host
+#  
+> 1..10 | ? { $_ % 2 } | Write-Host
 
 ## Loop 
 	# $_ is used to reference the current variable in the pipeline
