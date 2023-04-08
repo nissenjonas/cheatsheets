@@ -61,25 +61,29 @@ See [Ms docs](https://docs.microsoft.com/da-dk/powershell/module/microsoft.power
 	> 1..10 | % { Write-Host $_ }
 
 ## Error handling
-	try
-	{
-		...
-	}
-	catch [System.OutOfMemoryException]
-	{
-    	# Handle specific error
-	}
-	catch
-	{
-		Write-Hoste _$.Exception.Message
-	}
+```powershell
+try
+{
+    ...
+}
+catch [System.OutOfMemoryException]
+{
+    # Handle specific error
+}
+catch
+{
+    Write-Host $Error.Exception.Message
+}
+```
 
 ## Tricks
 ### Running cmdline tools from powershell
-	# Setting up 7zip to extract archive - useful for scripts 
-	> set-alias sz "$env:ProgramW6432\7-Zip\7z.exe"
-	> sz e "c:\temp\archive.gz"
+```powershell
+# Setting up 7zip to extract archive - useful for scripts 
+> set-alias sz "$env:ProgramW6432\7-Zip\7z.exe"
+> sz e "c:\temp\archive.gz"
 
-	# - or for setting up shortcuts in you profile
-	> set-alias subl "...\SublimeText3.exe"	# Add to $profile
-	> subl .\myFile.txt						# run in shell to open text file in Sublime
+# - or for setting up shortcuts in you profile
+> set-alias subl "...\SublimeText3.exe"	# Add to $profile
+> subl .\myFile.txt						# run in shell to open text file in Sublime
+```
